@@ -25,7 +25,7 @@ class Token(object):
     def __hash__(self):
         return hash(self.name)
 
-    #Prints all attributes on a single line
+    #Prints name and value
     def __repr__(self):
         return '('+self.name+', "'+str(self.value)+'"'+')'
 
@@ -34,7 +34,6 @@ class Token_template(object):
     #name = Name of produced token, lowercase
     #regexp = Regular expression recognizing the token
     #process = Lambda function for processing the string into the token value
-    #mode = Mode that the token works in, all caps
     def __init__(self,name,regexp,process=None):
         self.name = name
         r = re.compile(regexp)
@@ -67,7 +66,7 @@ class Token_template(object):
 def temp(name,regexp,process=None):
     return Token_template(name,regexp,process)
 
-#Actual lexer that takes input string, list of templates, and a mode switch function
+#Actual lexer that takes input string and list of templates
 def lex(string,lexer):
     start = 0
     tokens = []
@@ -105,6 +104,5 @@ def lex(string,lexer):
         #If we are at the end of the string, return finished list of tokens
         if start == len(string): return tokens
  
-
 
  
