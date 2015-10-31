@@ -1,2 +1,4 @@
 # Lexer-and-Parser
 A complete parser generator which tokenizes the input string before creating an abstract syntax tree by processing the tokens with a context-free grammar. The tokens are defined using the regex library and the actual parser an implementation of Earley's parsing algorithm. Only the Parse.py file needs to be imported, though functions from both files need to be used to generate a complete parser. The Lexer file can read strings and turn them into a list of "Token" objects which are parsed by the Parser file to make an AST. Thus, usage of the two files' functions must be in that order and synchronized (same token names...).  
+
+DISCLAIMER: If a specific token needs to be recognized but omitted by the lexer (from Lexer.py), make sure to input a function into the "process" parameter of the template definition but set its return value to None.
