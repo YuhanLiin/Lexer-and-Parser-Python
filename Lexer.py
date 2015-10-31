@@ -7,7 +7,7 @@ import re
 #Class for tokens
 class Token(object):
     #name = name of token
-    #value = the data stored in this token taken from the string
+    #value = the data stored in this token based on the matched string
     #start/end = where the token started/ended in the string
     def __init__(self,name,value,start,end,line,col):
         self.name = name
