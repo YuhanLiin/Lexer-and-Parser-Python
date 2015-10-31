@@ -1,0 +1,2 @@
+# Lexer-and-Parser
+A complete parser generator which tokenizes the input string before creating a abstract syntax tree by processing the tokens with a context-free grammar. The tokens are defined using the regex library and the actual parser an implementation of Earley's parsing algorithm. This personal project was created after I had finished the Programming Languages course from Udacity and is my way of applying my newly gained knowledge on parsers as a personal "final project".
