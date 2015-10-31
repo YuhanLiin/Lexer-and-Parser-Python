@@ -14,7 +14,7 @@ from Lexer import *
 #             This is done when the state goes through reduction and when the start state is outputted
 #            -lambda p: (p[0],p[2]) on the rule P | a b c  ----->   (name,b.value) 
 #Parse states: [ left symbol, deque[seen tokens], deque[unseen tokens], origin position, token list, process, antilookahead]
-#              S -> A . b from 3    ['S',['A'],['b'], 3, [name,A], lambda function, ['c']]
+##              S -> A . b from 3    ['S',['A'],['b'], 3, [name,A], lambda function, ['c']]
 
 
 
